@@ -14,3 +14,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('cep/{cep}/sync', ['uses' => 'LocationController@getLocationByCepSync']);
+$router->get('cep/{cep}/async', ['uses' => 'LocationController@getLocationByCepASync']);
