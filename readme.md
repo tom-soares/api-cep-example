@@ -1,21 +1,38 @@
-# Lumen PHP Framework
+# Instalação:
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+## Pré-Requisitos:
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+- PHP 7.0
+- Composer
 
-## Official Documentation
+Após instalar as dependências(PHP 7 e composer) execute os seguintes passos para configurar o projeto:
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+```
+git clone https://github.com/tom-soares/api-cep-example.git
+```
+```
+cd api-cep-example
+```
+```
+composer install
+```
+Execute o servidor PHP  com este comando:
+```
+php -S localhost:8002 -t public
+```
+Acesse o Browser para testar:
+```
+http://localhost:8002/cep/17507260/sync
+```
 
-## Security Vulnerabilities
+# Rotas disponíveis:
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+- Rota faz as chamada de forma `síncrona`
+```
+http://localhost:8002/cep/`coloqueocepaqui`/sync
+```
 
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+- Rota faz as chamada de forma `assíncrona`
+```
+http://localhost:8002/cep/'coloqueocepaqui'/async
+```
