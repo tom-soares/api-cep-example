@@ -27,12 +27,12 @@ http://localhost:8002/cep/17507260/sync
 
 # Rotas disponíveis:
 
-- Rota faz as chamada de forma `síncrona`
+- Rota faz as chamadas de forma `síncrona`
 ```
 http://localhost:8002/cep/`coloqueocepaqui`/sync
 ```
 
-- Rota faz as chamada de forma `assíncrona`
+- Rota faz as chamadas de forma `assíncrona`
 ```
 http://localhost:8002/cep/'coloqueocepaqui'/async
 ```
