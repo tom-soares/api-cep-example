@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6d034ed518d2ba1952d74a41f8136e44",
-    "content-hash": "062c957186157549e8150385bab44181",
+    "hash": "3997e144225b7a4b941df8bab83d1324",
+    "content-hash": "4a343727d3b83d1a75cd16f9728086ac",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -73,6 +73,73 @@
                 "string"
             ],
             "time": "2017-07-22 12:18:28"
+        },
+        {
+            "name": "folklore/graphql",
+            "version": "v1.0.31",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Folkloreatelier/laravel-graphql.git",
+                "reference": "3b2201b4626bb5db8c8e4103e11b79d500f77412"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Folkloreatelier/laravel-graphql/zipball/3b2201b4626bb5db8c8e4103e11b79d500f77412",
+                "reference": "3b2201b4626bb5db8c8e4103e11b79d500f77412",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+                "php": ">=5.5.9",
+                "webonyx/graphql-php": "~0.10.2"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "~1.4",
+                "mockery/mockery": "0.9.*",
+                "orchestra/testbench": "3.1.*|3.2.*|3.3.*|3.4.*|3.5.*",
+                "phpunit/phpunit": "~4.0|~5.0|~5.7|~6.0"
+            },
+            "type": "project",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Folklore\\GraphQL\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "GraphQL": "Folklore\\GraphQL\\Support\\Facades\\GraphQL"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Folklore\\GraphQL\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Folklore",
+                    "email": "info@atelierfolklore.ca",
+                    "homepage": "http://atelierfolklore.ca"
+                },
+                {
+                    "name": "David Mongeau-Petitpas",
+                    "email": "dmp@atelierfolklore.ca",
+                    "homepage": "http://mongo.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Facebook GraphQL for Laravel",
+            "keywords": [
+                "framework",
+                "graphql",
+                "laravel",
+                "react"
+            ],
+            "time": "2017-10-13 14:23:10"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1398,6 +1465,61 @@
             "time": "2017-09-04 17:40:09"
         },
         {
+            "name": "league/csv",
+            "version": "6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/csv.git",
+                "reference": "5ffb2b42ed5d7ae20d80d4480b34743f5086d4a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/5ffb2b42ed5d7ae20d80d4480b34743f5086d4a8",
+                "reference": "5ffb2b42ed5d7ae20d80d4480b34743f5086d4a8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Csv\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://github.com/nyamsprod/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Csv data manipulation made easy in PHP",
+            "keywords": [
+                "csv",
+                "export",
+                "filter",
+                "import",
+                "read",
+                "write"
+            ],
+            "time": "2015-01-21 12:06:27"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.23.0",
             "source": {
@@ -1518,6 +1640,53 @@
                 "schedule"
             ],
             "time": "2017-01-23 04:29:33"
+        },
+        {
+            "name": "mustangostang/spyc",
+            "version": "0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mustangostang/spyc.git",
+                "reference": "dc4785b4d7227fd9905e086d499fb8abfadf9977"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mustangostang/spyc/zipball/dc4785b4d7227fd9905e086d499fb8abfadf9977",
+                "reference": "dc4785b4d7227fd9905e086d499fb8abfadf9977",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.5.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Spyc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "mustangostang",
+                    "email": "vlad.andersen@gmail.com"
+                }
+            ],
+            "description": "A simple YAML loader/dumper class for PHP",
+            "homepage": "https://github.com/mustangostang/spyc/",
+            "keywords": [
+                "spyc",
+                "yaml",
+                "yml"
+            ],
+            "time": "2013-02-21 10:52:01"
         },
         {
             "name": "nesbot/carbon",
@@ -1808,6 +1977,61 @@
                 "simple-cache"
             ],
             "time": "2017-01-02 13:31:39"
+        },
+        {
+            "name": "soapbox/laravel-formatter",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SoapBox/laravel-formatter.git",
+                "reference": "9149adcf6f14a563ccd5b81579e802b1f402aef9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SoapBox/laravel-formatter/zipball/9149adcf6f14a563ccd5b81579e802b1f402aef9",
+                "reference": "9149adcf6f14a563ccd5b81579e802b1f402aef9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=4.0",
+                "league/csv": "~6.0",
+                "mustangostang/spyc": "0.5.*@dev",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SoapBox\\Formatter": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham McCarthy",
+                    "email": "graham@soapboxhq.com",
+                    "homepage": "http://grahammccarthy.com"
+                },
+                {
+                    "name": "Jaspaul Bola",
+                    "email": "jaspaul.b@gamil.com",
+                    "homepage": "http://jaspaulbola.com"
+                }
+            ],
+            "description": "A formatting library that converts data output between XML, CSV, JSON, TXT, YAML and a few others.",
+            "homepage": "http://github.com/SoapBox/laravel-formatter",
+            "keywords": [
+                "convert",
+                "csv",
+                "data",
+                "formatter",
+                "laravel",
+                "xml",
+                "yaml"
+            ],
+            "time": "2014-10-20 15:15:48"
         },
         {
             "name": "symfony/console",
@@ -2406,6 +2630,53 @@
                 "environment"
             ],
             "time": "2016-09-01 10:05:43"
+        },
+        {
+            "name": "webonyx/graphql-php",
+            "version": "v0.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webonyx/graphql-php.git",
+                "reference": "7cc863df37b2270ec2b57cb9d322da064d832a59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/7cc863df37b2270ec2b57cb9d322da064d832a59",
+                "reference": "7cc863df37b2270ec2b57cb9d322da064d832a59",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.5,<8.0-DEV"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "psr/http-message": "^1.0"
+            },
+            "suggest": {
+                "psr/http-message": "To use standard GraphQL server",
+                "react/promise": "To leverage async resolving on React PHP platform"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/deprecated.php"
+                ],
+                "psr-4": {
+                    "GraphQL\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "description": "A PHP port of GraphQL reference implementation",
+            "homepage": "https://github.com/webonyx/graphql-php",
+            "keywords": [
+                "api",
+                "graphql"
+            ],
+            "time": "2017-08-30 16:33:58"
         }
     ],
     "packages-dev": [

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\CorreiosService;
 use App\Helpers\Response;
+use App\Services\CorreiosService;
+use Illuminate\Http\Request;
 
-class LocationController extends Controller
+class JsonController extends Controller
 {
     /**
      * Variable Service of Correios
@@ -42,8 +43,9 @@ class LocationController extends Controller
      */
     public function getLocationByCepASync($cep)
     {
+        $format = $request->get('format') ?? 'json';
         try {
-            $this->correiosService->getLocationByCepASync($cep);
+            $this->correiosService->getLocationByCepASync($cep, $format);
         } catch (\Exception $error) {
             return Response::badRequest($error->getMessage());
         }

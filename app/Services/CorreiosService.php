@@ -13,7 +13,7 @@ class CorreiosService
     {
         $this->clientHttp = new Client([
             // URL base para as requisições
-            'base_uri' => 'https://correiosapi.apphb.com/',
+            'base_uri' => 'http://viacep.com.br/ws/',
             // Tempo padrão de espera por resposata da api
             'timeout'  => 2.0,
         ]);
@@ -22,9 +22,13 @@ class CorreiosService
     /**
      * Busca informações da localização nos correios e retorna essas informações de forma sincrona.
      */
-    public function getLocationByCepSync(int $cep)
+    public function getLocationByCepSync(int $cep, string $format = 'json')
     {
-        $response = $this->clientHttp->request('GET', "cep/$cep");
+        $response = $this->clientHttp->request('GET', "$cep/json");
+        if ($format === 'xml') {
+            return $response->getBody()->getContents();
+        }
+
         $response = json_decode($response->getBody());
 
         return $response;
@@ -33,9 +37,9 @@ class CorreiosService
     /**
      * Busca informações da localização nos correios e retorna essas informações de forma assincrona.
      */
-    public function getLocationByCepASync(int $cep)
+    public function getLocationByCepASync(int $cep, string $format = 'json')
     {
-        $promise = $this->clientHttp->getAsync("cep/$cep");
+        $promise = $this->clientHttp->getAsync("$cep/$format");
         $promise->then(function ($response) {
             echo $response->getBody();
         });
