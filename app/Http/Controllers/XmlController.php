@@ -45,9 +45,8 @@ class XmlController extends Controller
      */
     public function getLocationByCepASync($cep)
     {
-        $format = $request->get('format') ?? 'json';
         try {
-            $this->correiosService->getLocationByCepASync($cep, $format);
+            $this->correiosService->getLocationByCepASync($cep, 'xml');
         } catch (\Exception $error) {
             return Response::badRequest($error->getMessage());
         }

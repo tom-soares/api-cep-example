@@ -39,9 +39,10 @@ class CorreiosService
      */
     public function getLocationByCepASync(int $cep, string $format = 'json')
     {
-        $promise = $this->clientHttp->getAsync("$cep/$format");
-        $promise->then(function ($response) {
-            echo $response->getBody();
-        });
+        $promise = $this->clientHttp
+            ->getAsync("$cep/$format")
+            ->then(function ($response) use (&$content) {
+                echo $response->getBody()->getContents();
+            })->wait();
     }
 }
