@@ -118,10 +118,10 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-
+                'places' => '\App\GraphQL\Query\PlacesQuery'
             ],
             'mutation' => [
-
+                'updatePlaceName' => '\App\GraphQL\Mutation\UpdatePlaceNameMutation'
             ]
         ]
     ],
@@ -143,7 +143,7 @@ return [
      * ]
      */
     'types' => [
-
+        'Place' => '\App\GraphQL\Type\PlaceType'
     ],
 
     /*
